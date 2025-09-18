@@ -26,4 +26,22 @@ module.exports = {
     'no-console': 'off',
     'react/prop-types': 0,
   },
+  overrides: [
+    {
+      files: ['cypress/**/*.js'],
+      globals: {
+        // [!code ++]
+        cy: 'readonly', // [!code ++]
+        Cypress: 'readonly', // [!code ++]
+        describe: 'readonly', // [!code ++]
+        it: 'readonly', // [!code ++]
+        beforeEach: 'readonly', // [!code ++]
+        afterEach: 'readonly', // [!code ++]
+        // ... 其他你在 Cypress 测试中使用的全局函数
+      }, // [!code ++]
+      rules: {
+        'no-unused-expressions': 'off',
+      },
+    },
+  ],
 }

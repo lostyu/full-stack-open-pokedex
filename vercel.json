@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "github": {
     "enabled": false,
     "silent": true
@@ -9,8 +10,8 @@
       "use": "@vercel/node"
     },
     {
-      "src": "dist/**",
-      "use": "@vercel/static"
+      "src": "package.json",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
